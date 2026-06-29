@@ -1,0 +1,6 @@
+{
+  "name": "Gia Phả Cụ Nghiêm Cung",
+  "description": "Hệ thống tra cứu, sơ đồ cây gia phả, tưởng niệm tiên tổ và quản trị nhân khẩu dòng họ Cụ Nghiêm Cung.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

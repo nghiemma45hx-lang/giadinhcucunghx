@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Lora', serif;
+    background-color: #fdfbf7;
+    color: #4a331a;
+  }
+  
+  h1, h2, h3, h4, h5, h6, .font-playfair {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f4f0e6;
+}
+::-webkit-scrollbar-thumb {
+  background: #b8956b;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8b7355;
+}
+
+/* Marquee Animation */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: marquee 25s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Interactive Altar / Smoke effects */
+@keyframes riseSmoke {
+  0% {
+    transform: translateY(0) scaleX(1) scaleY(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translateY(-40px) scaleX(1.4) scaleY(0.8) rotate(3deg);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateY(-80px) scaleX(2) scaleY(0.5) rotate(-5deg);
+    opacity: 0;
+  }
+}
+
+.smoke-particle {
+  animation: riseSmoke 4s ease-out infinite;
+}
+
